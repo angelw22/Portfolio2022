@@ -49,15 +49,14 @@ function dragElement(elmnt) {
     if (elemTopPos > 0 && elemTopPos < (screen.offsetHeight - elmnt.offsetHeight) - 45) {
       elmnt.style.top = elemTopPos + "px";
     } else {
-      console.log('close drag top, because elemtop', elemTopPos)
+      // console.log('close drag top, because elemtop', elemTopPos)
       closeDragElement();
     }
 
     if (elemLeftPos > 0 && elemLeftPos < (screen.offsetWidth - elmnt.offsetWidth)) {
       elmnt.style.left = elemLeftPos + "px";
     } else {
-      console.log('close drag lefts')
-
+      // console.log('close drag lefts')
       closeDragElement();
     } 
   }

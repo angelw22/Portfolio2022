@@ -40,159 +40,163 @@
                 </svg>
             </div>
           </div>
-          <table style="border-collapse:collapse;"> 
-            <tr id="popup-nav">
-              <th colspan="1" style="display: flex; flex-direction: row; background-color: rgb(33, 33, 33); color: #fff; width:180px">
-                <div style="background-color:lightpink; border-radius: 100%; padding: 2px; margin: 8px; width: 20px; height: 20px; text-align: center;">
-                  <img src="./img/smile_emoji.png" style="height: 16px; width: 16px"/>
-                </div>
-                <div style="padding: 8px 24px 8px 8px; line-height: 1.5; display: inline-block; vertical-align: middle;">Angel's Work </div>
-              </th>
-              <th colspan="1" style="width:100%; background-color: rgb(33, 33, 33);  border-left:0.5px solid #676767;">
-        
-              </th>
-            </tr>
-            <tr class="popup-contents" id="popup-home-contents">
-              <td style="
-              padding: 0;
-              display: flex; 
-              flex-direction: column;
-              width: 100%;
-              box-sizing: border-box;"
-              >
-                <div style="margin: 16px 12px;  width:fit-content; font-weight: 600">Angel's Work</div>
-                <div class="left-list-item highlighted" id="list-ux" onclick="switchCateg('ux')">
-                  UX Projects
-                </div>
-                <div class="left-list-item" id="list-workshop" onclick="switchCateg('workshop')">
-                  Workshops
-                </div>
-                <div class="left-list-item" id="list-sideproj" onclick="switchCateg('sideproj')">
-                  Side Projects
-                </div>
-              </td> 
-              <td style="border-left: 0.5px solid rgb(210, 210, 210); padding: 12px">
-                <div style="padding: 12px; border-bottom: 0.5px solid rgb(210, 210, 210)">
-                  <h1 id="categ-title" style="margin: 0;">UX Projects</h1>
-                  <div id="categ-desc" style="font-size: 14px">Case studies of the projects I have worked on as a UX Designer</div>
-                </div>
-                <div id="ux-items" class="items-container">
-                  <div class="case-study" onclick="openItem('cotf')">
-                    <img src="./img/COTF_thumbnail.png"/>
-                    <div class="case-desc"> 
-                      <div class="case-title">Classroom of the Future</div>
-                      Imagining the future of teaching and learning
+          <div style="height: 510px; overflow: scroll;"> 
+              <table style="border-collapse:collapse;"> 
+              <tr id="popup-nav">
+                <th colspan="1" style="display: flex; display:-webkit-flex; flex-direction: row; background-color: rgb(33, 33, 33); color: #fff; width:180px">
+                  <div style="background-color:lightpink; border-radius: 100%; padding: 2px; margin: 8px; width: 20px; height: 20px; text-align: center;">
+                    <img src="./img/smile_emoji.png" style="height: 16px; width: 16px"/>
+                  </div>
+                  <div style="padding: 8px 24px 8px 8px; line-height: 1.5; display: inline-block; vertical-align: middle;">Angel's Work </div>
+                </th>
+                <th colspan="1" style="width:100%; background-color: rgb(33, 33, 33);  border-left:0.5px solid #676767;">
+          
+                </th>
+              </tr>
+              <tr class="popup-contents" id="popup-home-contents">
+                <td style="
+                vertical-align: top;
+                padding: 0;
+                width: 182px;
+                box-sizing: border-box;"
+                >
+                  <div style="margin: 16px 12px;  width:fit-content; font-weight: 600">Angel's Work</div>
+                  <div class="left-list-item highlighted" id="list-ux" onclick="switchCateg('ux')">
+                    UX Projects
+                  </div>
+                  <div class="left-list-item" id="list-workshop" onclick="switchCateg('workshop')">
+                    Workshops
+                  </div>
+                  <div class="left-list-item" id="list-sideproj" onclick="switchCateg('sideproj')">
+                    Side Projects
+                  </div>
+                </td> 
+                <td style="border-left: 0.5px solid rgb(210, 210, 210); padding: 12px">
+                  <div style="padding: 12px; border-bottom: 0.5px solid rgb(210, 210, 210)">
+                    <h1 id="categ-title" style="margin: 0;">UX Projects</h1>
+                    <div id="categ-desc" style="font-size: 14px">Case studies of the projects I have worked on as a UX Designer</div>
+                  </div>
+                  <div id="ux-items" class="items-container">
+                    <div class="case-study" onclick="openItem('cotf')">
+                      <img src="./img/COTF_thumbnail.png"/>
+                      <div class="case-desc"> 
+                        <div class="case-title">Classroom of the Future</div>
+                        Imagining the future of teaching and learning
+                      </div>
+                    </div>
+                    <div class="case-study" onclick="openItem('opencerts')">
+                      <img src="./img/Opencerts_thumbnail.png" />
+                      <div class="case-desc"> 
+                        <div class="case-title">OpenCerts</div>
+                        Designing a blockchain-based service for education certificates
+                      </div>
+                    </div>
+                    <div class="case-study" onclick="openItem('tt')">
+                      <img src="./img/TT_thumbnail.png" />
+                      <div class="case-desc"> 
+                        <div class="case-title">TraceTogether</div>
+                        Designing Singapore's Contact Tracing app
+                      </div>
+                    </div>
+                    <div class="case-study" onclick="openItem('earlybird')">
+                      <img src="./img/Earlybird_thumbnail.png" />
+                      <div class="case-desc"> 
+                        <div class="case-title">Project EarlyBird</div>
+                        Helping people plan for their End-of-life care in advance
+                      </div>
                     </div>
                   </div>
-                  <div class="case-study" onclick="openItem('opencerts')">
-                    <img src="./img/Opencerts_thumbnail.png" />
-                    <div class="case-desc"> 
-                      <div class="case-title">OpenCerts</div>
-                      Designing a blockchain-based service for education certificates
+                  <div id="workshop-items" class="items-container" style="display:none">
+                    <div class="case-study" onclick="openItem('webdev')">
+                      <img src="./img/webdev_thumbnail.png"/>
+                      <div class="case-desc"> 
+                        <div class="case-title">Web Dev Basics</div>
+                        A hands-on workshop for web development basics! 
+                      </div>
+                    </div>
+                    <div class="case-study" onclick="openItem('colours')">
+                      <img src="./img/colours_thumbnail.png"/>
+                      <div class="case-desc"> 
+                        <div class="case-title">Fun with colours</div>
+                        Colour theory, reflection and games! 
+                      </div>
                     </div>
                   </div>
-                  <div class="case-study" onclick="openItem('tt')">
-                    <img src="./img/TT_thumbnail.png" />
-                    <div class="case-desc"> 
-                      <div class="case-title">TraceTogether</div>
-                      Designing Singapore's Contact Tracing app
+                  <div id="sideproj-items" class="items-container" style="display:none">
+                    <div class="case-study" onclick="openItem('eightball')">
+                      <img src="./img/Eightball_thumbnail.png"/>
+                      <div class="case-desc"> 
+                        <div class="case-title">Magic Eight Ball</div>
+                        A magic eight ball with custom quotes :) 
+                      </div>
+                    </div>
+                    <div class="case-study" onclick="openItem('party')">
+                      <img src="./img/party_thumbnail.png"/>
+                      <div class="case-desc"> 
+                        <div class="case-title">Party RSVP</div>
+                        A little RSVP site for my own solemnisation party~
+                      </div>
                     </div>
                   </div>
-                  <div class="case-study" onclick="openItem('earlybird')">
-                    <img src="./img/Earlybird_thumbnail.png" />
-                    <div class="case-desc"> 
-                      <div class="case-title">Project EarlyBird</div>
-                      Helping people plan for their End-of-life care in advance
-                    </div>
-                  </div>
-                </div>
-                <div id="workshop-items" class="items-container" style="display:none">
-                  <div class="case-study" onclick="openItem('webdev')">
-                    <img src="./img/webdev_thumbnail.png"/>
-                    <div class="case-desc"> 
-                      <div class="case-title">Web Dev Basics</div>
-                      A hands-on workshop for web development basics! 
-                    </div>
-                  </div>
-                  <div class="case-study" onclick="openItem('colours')">
-                    <img src="./img/colours_thumbnail.png"/>
-                    <div class="case-desc"> 
-                      <div class="case-title">Fun with colours</div>
-                      Colour theory, reflection and games! 
-                    </div>
-                  </div>
-                </div>
-                <div id="sideproj-items" class="items-container" style="display:none">
-                  <div class="case-study" onclick="openItem('eightball')">
-                    <img src="./img/Eightball_thumbnail.png"/>
-                    <div class="case-desc"> 
-                      <div class="case-title">Magic Eight Ball</div>
-                      A magic eight ball with custom quotes :) 
-                    </div>
-                  </div>
-                  <div class="case-study" onclick="openItem('party')">
-                    <img src="./img/party_thumbnail.png"/>
-                    <div class="case-desc"> 
-                      <div class="case-title">Party RSVP</div>
-                      A little RSVP site for my own solemnisation party~
-                    </div>
-                  </div>
-                </div>
 
-              </td>
-            </tr>
-            <tr class="popup-contents" id="opencerts-content" style="display:none">
-              <td colspan="2" >
-                <!-- <div class="back-btn" onclick="openItem('home')">&#5176; back</div> -->
-                <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="856" height="550" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fred2PTM4swsVzgUtMaa0BY%2FResearch-documentation%3Fpage-id%3D119%253A1029%26node-id%3D127%253A1158%26viewport%3D300%252C321%252C0.12%26scaling%3Dcontain%26starting-point-node-id%3D127%253A1158%26" allowfullscreen></iframe>        
-              </td>
-            </tr>
-            <tr class="popup-contents" id="cotf-content" style="display:none">
-              <td colspan="2">
-                <!-- <div class="back-btn" onclick="openItem('home')">&#5176; back</div> -->
-                <iframe loading="lazy" style="width:856px" src="https://docs.google.com/presentation/d/e/2PACX-1vT10EsuJnprSHpsnUhF1R_Fjb3LMP6WfVFclimyFTjmw9ECkaY_7r9aYQztqO0SghtuO-uu7kUQyosJ/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-              </td>
-            </tr>
-            <tr class="popup-contents" id="tt-content"style="display:none">
-              <td colspan="2">
-                <!-- <div class="back-btn" onclick="openItem('home')">&#5176; back</div> -->
-                <iframe loading="lazy" style="width:856px" src="https://docs.google.com/presentation/d/e/2PACX-1vS8iuIfQvfBeHSeMYU5cDf2_1dUf9Jx1wOi1G8sd-uK7fJHSAJ8LPVswRqjzgtzvGlpucA8hxpFF7jf/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-              </td>
-            </tr>
-            <tr class="popup-contents" id="earlybird-content" style="display:none">
-              <td colspan="2">
-                <!-- <div class="back-btn" onclick="openItem('home')">&#5176; back</div> -->
-                <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="856" height="550" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FN7Q5sLBtukVvBxYDhzr8nT%2FUntitled%3Fpage-id%3D0%253A1%26node-id%3D1%253A2%26viewport%3D598%252C712%252C0.1%26scaling%3Dcontain%26starting-point-node-id%3D1%253A2" allowfullscreen></iframe>              </td>
-            </tr>
-            <tr class="popup-contents" id="webdev-content" style="display:none">
-              <td colspan="2">
-                <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="856" height="550" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fob2Ag7vZbNY7djXKERw7Lv%2FPractice-Sharing-Web-Dev%3Fpage-id%3D0%253A1%26node-id%3D6%253A58%26starting-point-node-id%3D6%253A58%26scaling%3Dscale-down" allowfullscreen></iframe>
-              </td>
-            </tr>
-            <tr class="popup-contents" id="colours-content" style="display:none">
-              <td colspan="2">
-                <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="856" height="550" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FKwarZwC6pxE7ZLdh7f2oJm%2FPractice-Sharing%3Ft%3DI4jfHDCZ2FCAerrY-1" allowfullscreen></iframe>
-              </td>
-            </tr>
-            <tr class="popup-contents" id="eightball-content" style="display:none">
-              <td colspan="2" style="display: flex; flex-direction: rowx;">
-                <div style="width: 150px; padding: 24px">
-                  <div>Try it with this QR code here:</div>
-                  <img style="width:150px; height: 150px; padding-top:24px"src="./img/EightballQR.png" />
-                </div>
-                <video width="222px" height="480px" controls>
-                  <source src="./img/Eightball.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                
-              </td>
-            </tr>
-            <tr class="popup-contents" id="party-content" style="display:none">
-              <td colspan="2">
-                <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="550" src="https://angelroy.party/" ></iframe>
-              </td>
-            </tr>
-          </table>
+                </td>
+              </tr>
+              <tr class="popup-contents" id="opencerts-content" style="display:none">
+                <td colspan="2" >
+                  <!-- <div class="back-btn" onclick="openItem('home')">&#5176; back</div> -->
+                  <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="856" height="550" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fred2PTM4swsVzgUtMaa0BY%2FResearch-documentation%3Fpage-id%3D119%253A1029%26node-id%3D127%253A1158%26viewport%3D300%252C321%252C0.12%26scaling%3Dcontain%26starting-point-node-id%3D127%253A1158%26" allowfullscreen></iframe>        
+                </td>
+              </tr>
+              <tr class="popup-contents" id="cotf-content" style="display:none">
+                <td colspan="2">
+                  <!-- <div class="back-btn" onclick="openItem('home')">&#5176; back</div> -->
+                  <iframe loading="lazy" style="width:856px" src="https://docs.google.com/presentation/d/e/2PACX-1vT10EsuJnprSHpsnUhF1R_Fjb3LMP6WfVFclimyFTjmw9ECkaY_7r9aYQztqO0SghtuO-uu7kUQyosJ/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                </td>
+              </tr>
+              <tr class="popup-contents" id="tt-content"style="display:none">
+                <td colspan="2">
+                  <!-- <div class="back-btn" onclick="openItem('home')">&#5176; back</div> -->
+                  <iframe loading="lazy" style="width:856px" src="https://docs.google.com/presentation/d/e/2PACX-1vS8iuIfQvfBeHSeMYU5cDf2_1dUf9Jx1wOi1G8sd-uK7fJHSAJ8LPVswRqjzgtzvGlpucA8hxpFF7jf/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                </td>
+              </tr>
+              <tr class="popup-contents" id="earlybird-content" style="display:none">
+                <td colspan="2">
+                  <!-- <div class="back-btn" onclick="openItem('home')">&#5176; back</div> -->
+                  <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="856" height="550" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FN7Q5sLBtukVvBxYDhzr8nT%2FUntitled%3Fpage-id%3D0%253A1%26node-id%3D1%253A2%26viewport%3D598%252C712%252C0.1%26scaling%3Dcontain%26starting-point-node-id%3D1%253A2" allowfullscreen></iframe>              </td>
+              </tr>
+              <tr class="popup-contents" id="webdev-content" style="display:none">
+                <td colspan="2">
+                  <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="856" height="550" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fob2Ag7vZbNY7djXKERw7Lv%2FPractice-Sharing-Web-Dev%3Fpage-id%3D0%253A1%26node-id%3D6%253A58%26starting-point-node-id%3D6%253A58%26scaling%3Dscale-down" allowfullscreen></iframe>
+                </td>
+              </tr>
+              <tr class="popup-contents" id="colours-content" style="display:none">
+                <td colspan="2">
+                  <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="856" height="550" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FKwarZwC6pxE7ZLdh7f2oJm%2FPractice-Sharing%3Ft%3DI4jfHDCZ2FCAerrY-1" allowfullscreen></iframe>
+                </td>
+              </tr>
+              <tr class="popup-contents" id="eightball-content" style="display:none">
+                <td>
+                  <div style="width: 150px; padding: 24px;">
+                    <div>Try it with this QR code here:</div>
+                    <img style="width:150px; height: 150px; padding-top:24px"src="./img/EightballQR.png" />
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <video width="222px" height="480px" controls>
+                      <source src="./img/Eightball.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </td>
+              </tr>
+              <tr class="popup-contents" id="party-content" style="display:none">
+                <td colspan="2">
+                  <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="550" src="https://angelroy.party/" ></iframe>
+                </td>
+              </tr>
+            </table>
+          </div>
         </div>
         <!-- resume popup -->
         <div class="popup" id="popup-resume-icon" style="height:100%; display: none;">

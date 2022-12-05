@@ -23,7 +23,8 @@ body {
   background-color: rgb(255, 255, 255);
   border: 1px solid #a6a2a2;
   background-image: url('img/background.png');
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
 }
 
 #header {
@@ -49,21 +50,24 @@ body {
 
 /* icons need to be top > 60, left > 8 */
 #work-icon {
-  top: 70;
+  top: 30;
   left: 20;
 }
 
 #resume-icon {
-  top: 70;
-  left: 120;
+  top: 30;
+  right: 120;
 }
 
 #game-icon {
-  top: 70; 
-  left: 400;
+  top: 170; 
+  right: 20;
 }
 
-
+#workshop-icon {
+  top: 30; 
+  right: 20;
+}
 
 .icon-img {
   width: 80px; 
@@ -91,7 +95,7 @@ body {
 .popup {
   max-width:880px; 
   width: 100%;
-  max-height:90%;
+  max-height:95%;
   position: absolute;
   top: 2;
   left: 120;
@@ -161,6 +165,31 @@ body {
 
 .back-btn:hover {
   filter: brightness(90%)
+}
+
+#popup-workshop-icon {
+  background-color: white;
+}
+
+.popup-url-bar {
+  background-color: whitesmoke;
+  width: 100%;
+  padding: 8px 12px 4px 12px;
+  box-shadow: 0px 1px 5px #0000002b;
+}
+
+.url-icons {
+  padding: 4px;
+}
+
+.url-bar {
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  padding: 2px 12px;
+  height: 100%;
 }
 
 .left-list-item {

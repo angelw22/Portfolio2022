@@ -17,30 +17,35 @@
       <div id="header"> Angel's portfolio </div>
       <div id="main-contents" style="position:relative;">
         <div class="icon" id="work-icon" onclick="iconClick(event, this)">
-          <img class="icon-img" src="https://cdn.sanity.io/images/599r6htc/localized/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.png?w=670&h=670&q=75&fit=max&auto=format" />
+          <img class="icon-img" src="./img/work_logo.png" />
           <div class="icon-text">Work</div>
         </div> 
-        <div class="icon" id="game-icon" onclick="iconClick(event, this)" style="display:none">
+        <!-- <div class="icon" id="game-icon" onclick="iconClick(event, this)">
           <img draggable="false" class="icon-img" src="https://static.vecteezy.com/system/resources/thumbnails/012/388/083/small/retro-game-console-icon-flat-illustration-free-vector.jpg" />
           <div class="icon-text">Mini-games</div>
+        </div> -->
+        <div class="icon" id="workshop-icon" onclick="iconClick(event, this)">
+          <img draggable="false" class="icon-img" src="./img/workshops_logo.png" />
+          <div class="icon-text">Workshops</div>
         </div>
         <div class="icon" id="resume-icon" onclick="iconClick(event, this)">
-          <img draggable="false" class="icon-img" src="https://banner2.cleanpng.com/20180331/vww/kisspng-computer-icons-document-memo-5ac0480f061158.0556390715225507990249.jpg" />
+          <img draggable="false" class="icon-img" src="./img/resume_icon.png" />
           <div class="icon-text">Resume</div>
         </div>
+        
         <!-- work popup  -->
         <div class="popup" id="popup-work-icon" style="display:none">
           <div class="popup-topbar" id="popup-topbar">
             <div class="close-btn" onclick="closePopUp(event, 'popup-work-icon')"></div>
             <div class="min-btn"></div>
             <div class="exp-btn" style="margin-right:12px"></div>
-            <div class="home-btn" style="padding: 0 8px; margin:auto 0; border-left: 0.5px solid rgb(110, 110, 110);  "onclick="openItem('home')">
+            <div class="home-btn" style="padding: 0 8px; margin:auto 0; border-left: 0.5px solid rgb(110, 110, 110);" onclick="openItem('home')">
               <svg width="24" height="24" viewBox="0 0 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M330.77 186L174.885 36L19 186H67.8848V314H142.885V206H206.885V313H281.885V186H330.77Z" fill="#D9D9D9"/>
                 </svg>
             </div>
           </div>
-          <div style="height: 510px; overflow: scroll;"> 
+          <div style="height: 600px; overflow: scroll;"> 
               <table style="border-collapse:collapse;"> 
               <tr id="popup-nav">
                 <th colspan="1" style="display: flex; display:-webkit-flex; flex-direction: row; background-color: rgb(33, 33, 33); color: #fff; width:180px">
@@ -64,9 +69,9 @@
                   <div class="left-list-item highlighted" id="list-ux" onclick="switchCateg('ux')">
                     UX Projects
                   </div>
-                  <div class="left-list-item" id="list-workshop" onclick="switchCateg('workshop')">
+                  <!-- <div class="left-list-item" id="list-workshop" onclick="switchCateg('workshop')">
                     Workshops
-                  </div>
+                  </div> -->
                   <div class="left-list-item" id="list-sideproj" onclick="switchCateg('sideproj')">
                     Side Projects
                   </div>
@@ -106,7 +111,7 @@
                       </div>
                     </div>
                   </div>
-                  <div id="workshop-items" class="items-container" style="display:none">
+                  <!-- <div id="workshop-items" class="items-container" style="display:none">
                     <div class="case-study" onclick="openItem('webdev')">
                       <img src="./img/webdev_thumbnail.png"/>
                       <div class="case-desc"> 
@@ -121,7 +126,7 @@
                         Colour theory, reflection and games! 
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                   <div id="sideproj-items" class="items-container" style="display:none">
                     <div class="case-study" onclick="openItem('eightball')">
                       <img src="./img/Eightball_thumbnail.png"/>
@@ -164,16 +169,6 @@
                   <!-- <div class="back-btn" onclick="openItem('home')">&#5176; back</div> -->
                   <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="856" height="550" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FN7Q5sLBtukVvBxYDhzr8nT%2FUntitled%3Fpage-id%3D0%253A1%26node-id%3D1%253A2%26viewport%3D598%252C712%252C0.1%26scaling%3Dcontain%26starting-point-node-id%3D1%253A2" allowfullscreen></iframe>              </td>
               </tr>
-              <tr class="popup-contents" id="webdev-content" style="display:none">
-                <td colspan="2">
-                  <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="856" height="550" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fob2Ag7vZbNY7djXKERw7Lv%2FPractice-Sharing-Web-Dev%3Fpage-id%3D0%253A1%26node-id%3D6%253A58%26starting-point-node-id%3D6%253A58%26scaling%3Dscale-down" allowfullscreen></iframe>
-                </td>
-              </tr>
-              <tr class="popup-contents" id="colours-content" style="display:none">
-                <td colspan="2">
-                  <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="856" height="550" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FKwarZwC6pxE7ZLdh7f2oJm%2FPractice-Sharing%3Ft%3DI4jfHDCZ2FCAerrY-1" allowfullscreen></iframe>
-                </td>
-              </tr>
               <tr class="popup-contents" id="eightball-content" style="display:none">
                 <td>
                   <div style="width: 150px; padding: 24px;">
@@ -206,6 +201,55 @@
             <div class="exp-btn"></div>
           </div>
           <iframe style="width:100%; height:100%" src="./img/resume.pdf"></iframe>
+        </div>
+        <!-- workshop popup -->
+        <div class="popup" id="popup-workshop-icon" style="height:100%; display: none;">
+          <div class="popup-topbar" id="popup-topbar">
+            <div class="close-btn" onclick="closePopUp(event, 'popup-workshop-icon')"></div>
+            <div class="min-btn"></div>
+            <div class="exp-btn"></div>
+          </div>
+          <div class="popup-url-bar">
+            <span class="url-icons" onclick="openItem('workshop')">
+              <svg width="24px" height="24px" viewBox="0 -45 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M330.77 186L174.885 36L19 186H67.8848V314H142.885V206H206.885V313H281.885V186H330.77Z" fill="#6c6c6c" />
+              </svg>
+            </span>
+            <span class="url-icons">
+              <img src="./img/svg/Left.svg" />                                           
+            </span>
+            <span class="url-icons">
+              <img src="./img/svg/Right.svg" />                     
+            </span>
+            <span class="url-icons">
+              <img src="./img/svg/refresh.svg" />                     
+            </span>
+            <span class="url-bar">
+             workshops.com
+            </span>
+          </div>
+          <div id="workshop-content" class="items-container">
+            <div class="case-study" onclick="openItem('webdev', 'workshop')">
+              <img src="./img/webdev_thumbnail.png"/>
+              <div class="case-desc"> 
+                <div class="case-title">Web Dev Basics</div>
+                A hands-on workshop for web development basics! 
+              </div>
+            </div>
+            <div class="case-study" onclick="openItem('colours', 'workshop')">
+              <img src="./img/colours_thumbnail.png"/>
+              <div class="case-desc"> 
+                <div class="case-title">Fun with colours</div>
+                Colour theory, reflection and games! 
+              </div>
+            </div>
+          </div>
+          <div class="popup-contents" id="webdev-content" style="display:none">
+              <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="856" height="550" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fob2Ag7vZbNY7djXKERw7Lv%2FPractice-Sharing-Web-Dev%3Fpage-id%3D0%253A1%26node-id%3D6%253A58%26starting-point-node-id%3D6%253A58%26scaling%3Dscale-down" allowfullscreen></iframe>
+          </div>
+          <div class="popup-contents" id="colours-content" style="display:none">
+              <iframe loading="lazy" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="856" height="550" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FKwarZwC6pxE7ZLdh7f2oJm%2FPractice-Sharing%3Ft%3DI4jfHDCZ2FCAerrY-1" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </div> 

@@ -1,14 +1,16 @@
 const workIcon = document.getElementById("work-icon");
-const gameIcon = document.getElementById("game-icon");
-const resumeIcon = document.getElementById("resume-icon")
+// const gameIcon = document.getElementById("game-icon");
+const resumeIcon = document.getElementById("resume-icon"); 
+const workshopIcon = document.getElementById("workshop-icon");
 const screen = document.getElementById("screen");
 
 document.getElementById("main-contents").style.height = (screen.offsetHeight - 20) + "px";
 
 //Desktop icons
-dragElement(gameIcon);
+// dragElement(gameIcon);
 dragElement(workIcon);
-dragElement(resumeIcon)
+dragElement(resumeIcon);
+dragElement(workshopIcon);
 dragElement(document.getElementById("popup-work-icon"))
 dragElement(document.getElementById("popup-resume-icon"))
 

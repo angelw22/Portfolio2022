@@ -5,6 +5,7 @@ console.log(urlParams.has('shortcut'))
 
 var activePage = "home"
 var activeCategory = "ux"
+var activeWorkshopCat = ""
 
 var categInfo = {
   ux: ["UX Projects", "Case studies of the projects I have worked on as a UX Designer"],
@@ -30,8 +31,18 @@ function switchCateg (cat) {
 }
 
 
-function openItem (item) {
-  if (item !== activePage) {
+function openItem (item, categ) {
+  if (categ === "workshop") {
+    if (item === "workshop") {
+      hideItem(activeWorkshopCat);
+    } else {
+      activeWorkshopCat = item; 
+      hideItem("workshop");
+    }
+    document.getElementById(item + "-content").style.display = "block";
+    
+
+  } else if (item !== activePage) {
     hideItem(activePage);
 
     switch(item) {

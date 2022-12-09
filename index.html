@@ -10,8 +10,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+
 </head>
-<body>
+<body onload="loaded()">
   <div id="monitor">
     <div id="screen">
       <div id="header"> Angel's portfolio </div>
@@ -45,7 +46,7 @@
                 </svg>
             </div>
           </div>
-          <div style="height: 600px; overflow: scroll;"> 
+          <div id="popup-content-container" onload="getHeight(this, 'popup-work-icon')"> 
               <table style="border-collapse:collapse;"> 
               <tr id="popup-nav">
                 <th colspan="1" style="display: flex; display:-webkit-flex; flex-direction: row; background-color: rgb(33, 33, 33); color: #fff; width:180px">
@@ -210,20 +211,20 @@
             <div class="exp-btn"></div>
           </div>
           <div class="popup-url-bar">
-            <span class="url-icons" onclick="openItem('workshop')">
+            <div class="home-btn url-icons" onclick="openItem('workshop', 'workshop')">
               <svg width="24px" height="24px" viewBox="0 -45 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M330.77 186L174.885 36L19 186H67.8848V314H142.885V206H206.885V313H281.885V186H330.77Z" fill="#6c6c6c" />
               </svg>
-            </span>
-            <span class="url-icons">
+            </div>
+            <div class="url-icons">
               <img src="./img/svg/Left.svg" />                                           
-            </span>
-            <span class="url-icons">
+            </div>
+            <div class="url-icons">
               <img src="./img/svg/Right.svg" />                     
-            </span>
-            <span class="url-icons">
+            </div>
+            <div class="url-icons">
               <img src="./img/svg/refresh.svg" />                     
-            </span>
+            </div>
             <span class="url-bar">
              workshops.com
             </span>

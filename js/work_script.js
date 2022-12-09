@@ -33,13 +33,15 @@ function switchCateg (cat) {
 
 function openItem (item, categ) {
   if (categ === "workshop") {
+    console.log('it workshop, item and cat is', item, categ)
+
     if (item === "workshop") {
       hideItem(activeWorkshopCat);
     } else {
       activeWorkshopCat = item; 
       hideItem("workshop");
     }
-    document.getElementById(item + "-content").style.display = "block";
+    document.getElementById(item + "-content").style.display = "flex";
     
 
   } else if (item !== activePage) {

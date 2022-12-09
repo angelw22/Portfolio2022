@@ -93,6 +93,8 @@ body {
 }
 
 .popup {
+  display: flex;
+  overflow: hidden;
   max-width:880px; 
   width: 100%;
   max-height:95%;
@@ -129,6 +131,12 @@ body {
 
 .popup-topbar > div:hover {
   filter: brightness(80%);
+  cursor: pointer;
+}
+
+.home-btn:hover {
+  filter: brightness(80%);
+  cursor: pointer;
 }
 
 .close-btn {
@@ -146,12 +154,19 @@ body {
 .popup-contents {
   padding: 12px;
   width: 100%;
+  overflow: scroll;
 }
 
 #popup-work-icon>.popup-contents {
   display: flex;
   flex-direction: row;
   padding: 0; 
+}
+
+
+#popup-content-container {
+  overflow: scroll; 
+  height: 100%;
 }
 
 /* .back-btn {
@@ -167,19 +182,31 @@ body {
   filter: brightness(90%)
 }
 
+#popup-work-icon {
+  grid-template-rows: 30px auto;
+}
+
 #popup-workshop-icon {
   background-color: white;
+  grid-template-rows: 30px 41px auto;
 }
+
+#popup-resume-icon {
+  grid-template-rows: 30px auto;
+}
+
 
 .popup-url-bar {
   background-color: whitesmoke;
-  width: 100%;
-  padding: 8px 12px 4px 12px;
+  max-width: 880px;
+  height: 25px;
+  padding: 8px;
   box-shadow: 0px 1px 5px #0000002b;
 }
 
 .url-icons {
   padding: 4px;
+  display: inline;
 }
 
 .url-bar {
@@ -187,7 +214,7 @@ body {
   border-radius: 10px;
   width: 100%;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: super;
   padding: 2px 12px;
   height: 100%;
 }
@@ -215,7 +242,7 @@ body {
 
 .case-study {
  max-width: 200px;
- /* height: 220px; */
+ height: fit-content;
  overflow:hidden;
  border: 1px solid rgb(210, 210, 210);
  border-radius: 6px;

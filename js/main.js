@@ -5,6 +5,15 @@ const workshopIcon = document.getElementById("workshop-icon");
 const screen = document.getElementById("screen");
 
 document.getElementById("main-contents").style.height = (screen.offsetHeight - 20) + "px";
+document.getElementById("popup-work-icon").style.height = (screen.offsetHeight - 70) + "px"; 
+document.getElementById("popup-resume-icon").style.height = (screen.offsetHeight - 70) + "px"; 
+document.getElementById("popup-workshop-icon").style.height = (screen.offsetHeight - 70) + "px"; 
+
+function loaded () {
+  console.log('work height', document.getElementById('popup-work-icon').clientHeight,  document.getElementById('popup-work-icon').offsetHeight)
+  getHeight(document.getElementById('popup-content-container'), 'popup-work-icon');
+}
+
 
 //Desktop icons
 // dragElement(gameIcon);
@@ -88,7 +97,7 @@ function iconClick (ev, el) {
 
 function openPopUp (id) {
   console.log('opening,', 'popup-' + id)
-  document.getElementById('popup-' + id).style.display = "block";
+  document.getElementById('popup-' + id).style.display = "grid";
 }
 
 
@@ -97,4 +106,10 @@ function closePopUp (e, id) {
   console.log('hi')
   console.log('closing', id);
   document.getElementById(id).style.display = "none";
+}
+
+function getHeight (el, parentId) {
+  console.log('get ehgit', (document.getElementById(parentId).offsetHeight - 70))
+  el.style.height = (document.getElementById(parentId).offsetHeight - 70) + "px"
+  console.log('el stle height', el.offsetHeight)
 }

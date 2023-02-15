@@ -3,6 +3,9 @@ const workIcon = document.getElementById("work-icon");
 const resumeIcon = document.getElementById("resume-icon"); 
 const workshopIcon = document.getElementById("workshop-icon");
 const screen = document.getElementById("screen");
+const clippy = document.getElementById("clippy");
+const clippySpeech = document.getElementById("clippy-speech");
+const clippyImg = document.getElementById("clippy-img")
 
 document.getElementById("main-contents").style.height = (screen.offsetHeight - 20) + "px";
 document.getElementById("popup-work-icon").style.height = (screen.offsetHeight - 70) + "px"; 
@@ -20,6 +23,7 @@ function loaded () {
 dragElement(workIcon);
 dragElement(resumeIcon);
 dragElement(workshopIcon);
+// dragElement(clippy);
 dragElement(document.getElementById("popup-work-icon"))
 dragElement(document.getElementById("popup-resume-icon"))
 
@@ -112,4 +116,16 @@ function getHeight (el, parentId) {
   console.log('get ehgit', (document.getElementById(parentId).offsetHeight - 70))
   el.style.height = (document.getElementById(parentId).offsetHeight - 70) + "px"
   console.log('el stle height', el.offsetHeight)
+}
+
+
+function changeClippySpeech (item) {
+  if (item === "off") {
+    clippySpeech.innerHTML = "Ha! No way you're turning me off!"
+    clippyImg.src = "./img/clippy/cheeky.png"
+  }
+  else {
+    clippySpeech.innerHTML = "I'm of no use at all, please double-click my other friends!"
+    clippyImg.src = "./img/clippy/default.png"
+  }
 }

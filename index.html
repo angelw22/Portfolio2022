@@ -41,6 +41,10 @@
           <img draggable="false" class="icon-img" src="./img/resume_icon.png" />
           <div class="icon-text">Resume</div>
         </div>
+        <div class="icon" id="clippy" onclick="changeClippySpeech()">
+          <img id="clippy-img" draggable="false" class="icon-img" src="./img/clippy/default.png" />
+          <div id="clippy-speech">Hello, I'm only a few days' worth of code so please pardon me!</div>
+        </div>
         
         <!-- work popup  -->
         <div class="popup" id="popup-work-icon" style="display:none">
@@ -246,8 +250,8 @@
         </div>
       </div>
     </div> 
-      <div style="height:10%; width:100%">
-        <img src="./img/powerbtn.png" style="height: 60%; left: 50%; position: relative; margin-top:6px; -ms-transform: translate(-50%, -50%); transform: translateX(-50%);"/>
+      <div style="height:10%; width:100%" onclick="changeClippySpeech('off')">
+        <img src="./img/powerbtn.png" style="cursor: pointer; height: 60%; left: 50%; position: relative; margin-top:6px; -ms-transform: translate(-50%, -50%); transform: translateX(-50%);"/>
       </div>
     </div>
   </div>
